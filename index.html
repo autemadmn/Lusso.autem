@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lusso | Carta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260621-lusso">
+</head>
+<body>
+  <main class="menu-shell">
+    <div class="language-switcher" id="languageSwitcher" aria-label="Idioma">
+      <button class="language-button" type="button" data-lang="es" aria-label="Ver carta en español">
+        <img class="language-flag" src="assets/ui/flags/flag-es.svg" alt="" aria-hidden="true">
+      </button>
+      <button class="language-button" type="button" data-lang="en" aria-label="View menu in English">
+        <img class="language-flag" src="assets/ui/flags/flag-gb.svg" alt="" aria-hidden="true">
+      </button>
+      <button class="language-button" type="button" data-lang="de" aria-label="Speisekarte auf Deutsch anzeigen">
+        <img class="language-flag" src="assets/ui/flags/flag-de.svg" alt="" aria-hidden="true">
+      </button>
+    </div>
+
+    <section class="intro" aria-label="Lusso">
+      <h1 class="brand-title">
+        <img class="brand-logo" src="assets/branding/logolusso.png" alt="Lusso">
+      </h1>
+    </section>
+
+    <nav class="category-tabs top-tabs" id="topTabs" aria-label="Categorías de la carta"></nav>
+
+    <section class="menu-layout" aria-label="Carta interactiva">
+      <aside class="menu-list" id="menuList" aria-label="Productos de la categoría seleccionada"></aside>
+
+      <article class="dish-preview" id="dishPreview" aria-live="polite" tabindex="-1">
+        <div class="image-frame menu-item-image" id="imageFrame" role="button" tabindex="0" aria-label="Ampliar imagen del producto">
+          <img id="dishImage" src="assets/bebidas/placeholder/generico.webp" alt="Producto Lusso">
+        </div>
+        <div class="preview-copy">
+          <p id="dishCategory">Aperitivo y picar</p>
+          <h2 id="dishTitle">Papas</h2>
+          <span id="dishPrice">2,00 €</span>
+          <p id="dishDescription"></p>
+          <p class="dish-note is-hidden" id="dishNote"></p>
+          <p class="photo-disclaimer" id="photoDisclaimer">*Fotos orientativas</p>
+          <p class="sr-only" id="dishStatus">Producto seleccionado: Papas.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <nav class="category-tabs bottom-tabs" id="bottomTabs" aria-label="Cambiar sección de la carta"></nav>
+
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Imagen ampliada">
+    <button class="image-lightbox-close" id="imageLightboxClose" type="button" aria-label="Cerrar imagen ampliada">×</button>
+    <div class="image-lightbox-panel">
+      <img class="image-lightbox-img" id="imageLightboxImg" src="" alt="" loading="lazy" decoding="async">
+    </div>
+  </div>
+
+  <div class="allergen-modal" id="allergenModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="allergenTitle">
+    <button class="allergen-modal-close" id="allergenModalClose" type="button" aria-label="Cerrar alérgenos">×</button>
+    <div class="allergen-modal-panel">
+      <p class="allergen-modal-eyebrow">Alérgenos</p>
+      <h2 id="allergenTitle">Alérgenos</h2>
+      <p class="allergen-modal-message">Queremos que disfrutes con tranquilidad.</p>
+      <div class="allergen-modal-content" id="allergenModalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js?v=20260621-lusso"></script>
+</body>
+</html>
