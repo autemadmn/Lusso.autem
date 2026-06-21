@@ -26,7 +26,7 @@ const foodGroups = [
   {
     id: "tapas",
     items: [
-      { id: "ensaladilla-rusa", price: "9,00 €", image: "assets/comidas/tapas/ensaladillarusa.webp" },
+      { id: "ensaladilla-rusa", price: "9,00 €", image: "assets/comidas/tapas/28_05_26_TAVOLAWEB-94.jpg" },
       { id: "ajo-arriero", price: "7,00 €", image: "assets/comidas/tapas/ajoarriero.webp" },
       { id: "nachos-verano", price: "9,00 €", image: "assets/comidas/tapas/nachosdeverano.webp" },
       { id: "tabla-jamon-iberico-duroc", price: "12,00 €", image: "assets/comidas/tapas/tablajamonibericoduroc.webp" },
@@ -43,7 +43,7 @@ const foodGroups = [
       { id: "tartufata", price: "14,00 €", image: "assets/comidas/pizzas/tartufata.webp" },
       { id: "jamon-queso", price: "14,00 €", image: "assets/comidas/pizzas/jamonyqueso.webp" },
       { id: "cuatro-quesos", price: "14,00 €", image: "assets/comidas/pizzas/4quesos.webp" },
-      { id: "peperoni", price: "14,00 €", image: "assets/comidas/pizzas/peperoni.webp" },
+      { id: "peperoni", price: "14,00 €", image: "assets/comidas/pizzas/28_05_26_TAVOLAWEB-218.jpg" },
       { id: "canibal", price: "14,00 €", image: "assets/comidas/pizzas/canibal.webp" }
     ]
   }
@@ -85,9 +85,9 @@ const beverageGroups = [
     id: "cerveza",
     items: [
       { id: "estrella-galicia", price: "3,50 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
-      { id: "radler", price: "3,50 €", image: "assets/bebidas/cerveza/amstel-oro-lata.webp" },
-      { id: "cerveza-00", price: "3,50 €", image: "assets/bebidas/cerveza/amstel-oro-lata.webp" },
-      { id: "cerveza-sin-gluten", price: "4,00 €", image: "assets/bebidas/cerveza/amstel-oro-lata.webp" },
+      { id: "radler", price: "3,50 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
+      { id: "cerveza-00", price: "3,50 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
+      { id: "cerveza-sin-gluten", price: "4,00 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
       { id: "estrella-galicia-lata", price: "3,50 €", image: "assets/bebidas/cerveza/amstel-oro-lata.webp" }
     ]
   },
