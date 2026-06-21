@@ -785,7 +785,7 @@ function getSectionItemCount(section) {
 function getFirstSectionDish(section) {
   const firstGroup = section.groups.find((group) => group.items.length > 0);
   if (!firstGroup) return null;
-  return { dish: firstGroup.items[0] };
+  return { dish: firstGroup.items[0], group: firstGroup };
 }
 
 function getAllergenInfo(item) {
@@ -1048,15 +1048,15 @@ function renderActiveSection() {
   }
 
   if (section.id === "comidas" || section.id === "bebidas") {
-    section.groups.forEach((group) => {
-      sectionBlock.append(createFoodGroup(group, false));
+    const firstDish = getFirstSectionDish(section);
+    section.groups.forEach((group, index) => {
+      sectionBlock.append(createFoodGroup(group, index === 0));
     });
     menuList.append(sectionBlock);
     menuList.setAttribute("aria-labelledby", "activeCategoryTitle");
-    resetImageDrag();
-    previewUpdateToken += 1;
-    dishPreview.classList.add("is-hidden");
-    menuLayout.classList.add("is-empty-section");
+    dishPreview.classList.remove("is-hidden");
+    menuLayout.classList.remove("is-empty-section");
+    if (firstDish) showDish(firstDish.dish, getGroupText(firstDish.group).category);
     return;
   }
 
