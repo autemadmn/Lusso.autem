@@ -6,10 +6,33 @@
   <title>Lusso | Carta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=20260621-lusso">
 </head>
 <body>
+
+  <!-- ================================================================
+       PORTADA / LANDING SCREEN
+       Cubre toda la pantalla hasta que el usuario pulsa "Ver carta".
+       ================================================================ -->
+  <section id="landing-screen" class="landing-screen" aria-label="Portada Lusso">
+    <div class="landing-bg" aria-hidden="true"></div>
+    <div class="landing-overlay" aria-hidden="true"></div>
+    <div class="landing-content">
+      <div class="landing-logo-wrap">
+        <img class="landing-logo" src="assets/branding/logolusso.webp" alt="Lusso" loading="eager" decoding="async">
+      </div>
+      <p class="landing-tagline">¿Qué te apetece hoy?</p>
+      <div class="landing-btn-wrap">
+        <button class="landing-btn" id="landingBtn" type="button">Ver carta</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CARTA DIGITAL
+       Oculta bajo la portada hasta que se pulsa "Ver carta".
+       ================================================================ -->
   <main class="menu-shell">
     <div class="language-switcher" id="languageSwitcher" aria-label="Idioma">
       <button class="language-button" type="button" data-lang="es" aria-label="Ver carta en español">
