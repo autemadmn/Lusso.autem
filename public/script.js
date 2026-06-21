@@ -33,7 +33,7 @@ const foodGroups = [
       { id: "tabla-quesos-valencianos", price: "12,00 €", image: "assets/comidas/tapas/tablaquesosvalencianos.webp" },
       { id: "servicio-pan", price: "2,00 €", image: GEN.tabla },
       { id: "servicio-picos-pan-adicional", price: "2,00 €", image: GEN.tabla },
-      { id: "salsas-adicionales", price: "2,00 €", image: GEN.tabla }
+      { id: "salsas-adicionales", price: "2,00 €", image: "assets/comidas/genericas/ensalada.webp" }
     ]
   },
   {

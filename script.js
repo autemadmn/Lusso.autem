@@ -9,12 +9,7 @@
 /* ---------- Imágenes ---------- */
 const PLACEHOLDER = "assets/bebidas/placeholder/generico.webp";
 const GEN = {
-  papas: "assets/comidas/genericas/pasta.webp",
-  aceitunas: "assets/comidas/genericas/ensalada.webp",
-  marisco: "assets/comidas/genericas/salmon.webp",
-  tabla: "assets/comidas/genericas/bruschetta.webp",
-  pizza: "assets/comidas/genericas/risotto.webp",
-  dulce: "assets/comidas/genericas/tarta.webp"
+  tabla: "assets/comidas/genericas/bruschetta.webp"
 };
 
 /* ---------- COMIDA ---------- */
@@ -22,34 +17,34 @@ const foodGroups = [
   {
     id: "picar",
     items: [
-      { id: "papas", price: "2,00 €", image: GEN.papas },
-      { id: "aceitunas", price: "2,50 €", image: GEN.aceitunas },
-      { id: "papas-mejillones", price: "8,00 €", image: GEN.marisco },
-      { id: "papas-boquerones", price: "8,00 €", image: GEN.marisco }
+      { id: "papas", price: "2,00 €", image: "assets/comidas/aperitivo-picar/papas.webp" },
+      { id: "aceitunas", price: "2,50 €", image: "assets/comidas/aperitivo-picar/aceitunas.webp" },
+      { id: "papas-mejillones", price: "8,00 €", image: "assets/comidas/aperitivo-picar/papasconmejillones.webp" },
+      { id: "papas-boquerones", price: "8,00 €", image: "assets/comidas/aperitivo-picar/papasconboquerones.webp" }
     ]
   },
   {
     id: "tapas",
     items: [
-      { id: "ensaladilla-rusa", price: "9,00 €", image: GEN.papas },
-      { id: "ajo-arriero", price: "7,00 €", image: GEN.papas },
-      { id: "nachos-verano", price: "9,00 €", image: GEN.tabla },
-      { id: "tabla-jamon-iberico-duroc", price: "12,00 €", image: GEN.tabla },
-      { id: "tabla-quesos-valencianos", price: "12,00 €", image: GEN.tabla },
+      { id: "ensaladilla-rusa", price: "9,00 €", image: "assets/comidas/tapas/28_05_26_TAVOLAWEB-94.jpg" },
+      { id: "ajo-arriero", price: "7,00 €", image: "assets/comidas/tapas/ajoarriero.webp" },
+      { id: "nachos-verano", price: "9,00 €", image: "assets/comidas/tapas/nachosdeverano.webp" },
+      { id: "tabla-jamon-iberico-duroc", price: "12,00 €", image: "assets/comidas/tapas/tablajamonibericoduroc.webp" },
+      { id: "tabla-quesos-valencianos", price: "12,00 €", image: "assets/comidas/tapas/tablaquesosvalencianos.webp" },
       { id: "servicio-pan", price: "2,00 €", image: GEN.tabla },
       { id: "servicio-picos-pan-adicional", price: "2,00 €", image: GEN.tabla },
-      { id: "salsas-adicionales", price: "2,00 €", image: GEN.tabla }
+      { id: "salsas-adicionales", price: "2,00 €", image: "assets/comidas/genericas/ensalada.webp" }
     ]
   },
   {
     id: "pizzas",
     items: [
-      { id: "margarita", price: "14,00 €", image: GEN.pizza },
-      { id: "tartufata", price: "14,00 €", image: GEN.pizza },
-      { id: "jamon-queso", price: "14,00 €", image: GEN.pizza },
-      { id: "cuatro-quesos", price: "14,00 €", image: GEN.pizza },
-      { id: "peperoni", price: "14,00 €", image: GEN.pizza },
-      { id: "canibal", price: "14,00 €", image: GEN.pizza }
+      { id: "margarita", price: "14,00 €", image: "assets/comidas/pizzas/margarita.webp" },
+      { id: "tartufata", price: "14,00 €", image: "assets/comidas/pizzas/tartufata.webp" },
+      { id: "jamon-queso", price: "14,00 €", image: "assets/comidas/pizzas/jamonyqueso.webp" },
+      { id: "cuatro-quesos", price: "14,00 €", image: "assets/comidas/pizzas/4quesos.webp" },
+      { id: "peperoni", price: "14,00 €", image: "assets/comidas/pizzas/28_05_26_TAVOLAWEB-218.jpg" },
+      { id: "canibal", price: "14,00 €", image: "assets/comidas/pizzas/canibal.webp" }
     ]
   }
 ];
@@ -59,84 +54,84 @@ const beverageGroups = [
   {
     id: "cafes",
     items: [
-      { id: "cafe-solo", price: "2,00 €", image: PLACEHOLDER },
-      { id: "cortado", price: "2,30 €", image: PLACEHOLDER },
-      { id: "bombon", price: "2,40 €", image: PLACEHOLDER },
-      { id: "cafe-con-leche", price: "2,60 €", image: PLACEHOLDER },
-      { id: "americano", price: "2,30 €", image: PLACEHOLDER },
-      { id: "infusiones-tes", price: "2,10 €", image: PLACEHOLDER },
-      { id: "carajillo", price: "2,50 €", image: PLACEHOLDER }
+      { id: "cafe-solo", price: "2,00 €", image: "assets/bebidas/cafes/cafe-solo.webp" },
+      { id: "cortado", price: "2,30 €", image: "assets/bebidas/cafes/cortado.webp" },
+      { id: "bombon", price: "2,40 €", image: "assets/bebidas/cafes/bombon.webp" },
+      { id: "cafe-con-leche", price: "2,60 €", image: "assets/bebidas/cafes/cafe-con-leche.webp" },
+      { id: "americano", price: "2,30 €", image: "assets/bebidas/cafes/americano.webp" },
+      { id: "infusiones-tes", price: "2,10 €", image: "assets/bebidas/cafes/infusiones-tes.webp" },
+      { id: "carajillo", price: "2,50 €", image: "assets/bebidas/cafes/carajillo.webp" }
     ]
   },
   {
     id: "refrescos",
     items: [
-      { id: "agua", price: "2,50 €", image: PLACEHOLDER },
-      { id: "agua-gas", price: "3,00 €", image: PLACEHOLDER },
-      { id: "pepsi", price: "3,00 €", image: PLACEHOLDER },
-      { id: "pepsi-zero", price: "3,00 €", image: PLACEHOLDER },
-      { id: "schweppes-naranja", price: "3,00 €", image: PLACEHOLDER },
-      { id: "schweppes-limon", price: "3,00 €", image: PLACEHOLDER },
-      { id: "seven-up", price: "3,00 €", image: PLACEHOLDER },
-      { id: "tonica-schweppes", price: "3,00 €", image: PLACEHOLDER },
-      { id: "aquarade-limon", price: "3,50 €", image: PLACEHOLDER },
-      { id: "aquarade-naranja", price: "3,50 €", image: PLACEHOLDER },
-      { id: "lipton-limon", price: "3,50 €", image: PLACEHOLDER },
-      { id: "redbull", price: "3,50 €", image: PLACEHOLDER },
-      { id: "zumos", price: "2,50 €", image: PLACEHOLDER }
+      { id: "agua", price: "2,50 €", image: "assets/bebidas/refrescos/agua.webp" },
+      { id: "agua-gas", price: "3,00 €", image: "assets/bebidas/refrescos/aguacongaslata.webp" },
+      { id: "pepsi", price: "3,00 €", image: "assets/bebidas/refrescos/pepsilata.webp" },
+      { id: "pepsi-zero", price: "3,00 €", image: "assets/bebidas/refrescos/pepsizerolata.webp" },
+      { id: "schweppes-naranja", price: "3,00 €", image: "assets/bebidas/refrescos/shweppesnaranjalata.webp" },
+      { id: "schweppes-limon", price: "3,00 €", image: "assets/bebidas/refrescos/shweppeslimonlata.webp" },
+      { id: "seven-up", price: "3,00 €", image: "assets/bebidas/refrescos/sevenuplata.webp" },
+      { id: "tonica-schweppes", price: "3,00 €", image: "assets/bebidas/refrescos/tonicashweppeslata.webp" },
+      { id: "aquarade-limon", price: "3,50 €", image: "assets/bebidas/refrescos/aquaradelimonlata.webp" },
+      { id: "aquarade-naranja", price: "3,50 €", image: "assets/bebidas/refrescos/aquaradenaranjalata.webp" },
+      { id: "lipton-limon", price: "3,50 €", image: "assets/bebidas/refrescos/liptonlimonlata.webp" },
+      { id: "redbull", price: "3,50 €", image: "assets/bebidas/refrescos/redbull.webp" },
+      { id: "zumos", price: "2,50 €", image: "assets/bebidas/refrescos/zumoslata.webp" }
     ]
   },
   {
     id: "cerveza",
     items: [
-      { id: "estrella-galicia", price: "3,50 €", image: PLACEHOLDER },
-      { id: "radler", price: "3,50 €", image: PLACEHOLDER },
-      { id: "cerveza-00", price: "3,50 €", image: PLACEHOLDER },
-      { id: "cerveza-sin-gluten", price: "4,00 €", image: PLACEHOLDER },
-      { id: "estrella-galicia-lata", price: "3,50 €", image: PLACEHOLDER }
+      { id: "estrella-galicia", price: "3,50 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
+      { id: "radler", price: "3,50 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
+      { id: "cerveza-00", price: "3,50 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
+      { id: "cerveza-sin-gluten", price: "4,00 €", image: "assets/bebidas/cerveza/cervezacarton.webp" },
+      { id: "estrella-galicia-lata", price: "3,50 €", image: "assets/bebidas/cerveza/amstel-oro-lata.webp" }
     ]
   },
   {
     id: "vermouth-copas",
     items: [
-      { id: "vermouth", price: "5,00 €", image: PLACEHOLDER },
-      { id: "combinados", price: "Desde 9,00 €", image: PLACEHOLDER },
-      { id: "combinados-premium", price: "Desde 11,00 €", image: PLACEHOLDER },
-      { id: "chupitos", price: "3,00 €", image: PLACEHOLDER },
-      { id: "chupitos-premium", price: "6,00 €", image: PLACEHOLDER },
-      { id: "licores", price: "6,00 €", image: PLACEHOLDER }
+      { id: "vermouth", price: "5,00 €", image: "assets/bebidas/vermouth-copas/vermutyzaguirre.webp" },
+      { id: "combinados", price: "Desde 9,00 €", image: "assets/bebidas/vermouth-copas/combinados.webp" },
+      { id: "combinados-premium", price: "Desde 11,00 €", image: "assets/bebidas/vermouth-copas/copas-premium.webp" },
+      { id: "chupitos", price: "3,00 €", image: "assets/bebidas/vermouth-copas/chupitos.webp" },
+      { id: "chupitos-premium", price: "6,00 €", image: "assets/bebidas/vermouth-copas/chupitos-premium.webp" },
+      { id: "licores", price: "6,00 €", image: "assets/bebidas/vermouth-copas/licores.webp" }
     ]
   },
   {
     id: "vinos-blancos",
     items: [
-      { id: "ceremonia-sauvignon-blanc", price: "Copa 4,00 € | Botella 20,00 €", image: PLACEHOLDER },
-      { id: "ramon-bilbao-verdejo", price: "Copa 4,80 € | Botella 22,00 €", image: PLACEHOLDER },
-      { id: "paco-lola-albarino", price: "Copa 4,80 € | Botella 22,00 €", image: PLACEHOLDER }
+      { id: "ceremonia-sauvignon-blanc", price: "Copa 4,00 € | Botella 20,00 €", image: "assets/bebidas/vinos/ceremonia-sauvignon-blanc.webp" },
+      { id: "ramon-bilbao-verdejo", price: "Copa 4,80 € | Botella 22,00 €", image: "assets/bebidas/vinos/ramon-bilbao-verdejo.webp" },
+      { id: "paco-lola-albarino", price: "Copa 4,80 € | Botella 22,00 €", image: "assets/bebidas/vinos/pl.webp" }
     ]
   },
   {
     id: "vinos-rosados",
     items: [
-      { id: "ceremonia-bobal-rose", price: "Copa 4,00 € | Botella 20,00 €", image: PLACEHOLDER }
+      { id: "ceremonia-bobal-rose", price: "Copa 4,00 € | Botella 20,00 €", image: "assets/bebidas/vinos/ceremonia-bobal-rose.webp" }
     ]
   },
   {
     id: "vinos-tintos",
     items: [
-      { id: "ceremonia-cabernet-sauvignon", price: "Copa 4,00 € | Botella 20,00 €", image: PLACEHOLDER },
-      { id: "ramon-bilbao-crianza-rioja", price: "Copa 4,80 € | Botella 22,00 €", image: PLACEHOLDER },
-      { id: "ceramic-monastrell", price: "Copa 4,80 € | Botella 22,00 €", image: PLACEHOLDER }
+      { id: "ceremonia-cabernet-sauvignon", price: "Copa 4,00 € | Botella 20,00 €", image: "assets/bebidas/vinos/ceremonia-cabernet-sauvignon.webp" },
+      { id: "ramon-bilbao-crianza-rioja", price: "Copa 4,80 € | Botella 22,00 €", image: "assets/bebidas/vinos/ramon-bilbao-crianza-rioja.webp" },
+      { id: "ceramic-monastrell", price: "Copa 4,80 € | Botella 22,00 €", image: "assets/bebidas/vinos/ceramic-monastrell-vicente-gandia.webp" }
     ]
   },
   {
     id: "cavas-espumosos",
     items: [
-      { id: "cava-patacona-brut", price: "Copa 5,00 € | Botella 30,00 €", image: PLACEHOLDER },
-      { id: "cava-lola", price: "Botella 40,00 €", image: PLACEHOLDER },
-      { id: "moet-chandon", price: "Botella 120,00 €", image: PLACEHOLDER },
-      { id: "moet-chandon-rose", price: "Botella 130,00 €", image: PLACEHOLDER },
-      { id: "moet-chandon-ice", price: "Botella 150,00 €", image: PLACEHOLDER }
+      { id: "cava-patacona-brut", price: "Copa 5,00 € | Botella 30,00 €", image: "assets/bebidas/cavas-espumosos/cavapataconabrut.webp" },
+      { id: "cava-lola", price: "Botella 40,00 €", image: "assets/bebidas/cavas-espumosos/cavalola.webp" },
+      { id: "moet-chandon", price: "Botella 120,00 €", image: "assets/bebidas/cavas-espumosos/moet-chandon.webp" },
+      { id: "moet-chandon-rose", price: "Botella 130,00 €", image: "assets/bebidas/cavas-espumosos/moet-chandon-rose.webp" },
+      { id: "moet-chandon-ice", price: "Botella 150,00 €", image: "assets/bebidas/cavas-espumosos/moet-chandon-ice.webp" }
     ]
   }
 ];
@@ -146,12 +141,12 @@ const cocktailGroups = [
   {
     id: "cocteles-clasicos",
     items: [
-      { id: "mojito-normal", price: "9,00 €", image: PLACEHOLDER },
-      { id: "mojito-sabores", price: "9,00 €", image: PLACEHOLDER },
-      { id: "daikiri-frozen", price: "9,00 €", image: PLACEHOLDER },
-      { id: "pina-colada", price: "9,00 €", image: PLACEHOLDER },
-      { id: "caipirinha", price: "9,00 €", image: PLACEHOLDER },
-      { id: "caipiroska", price: "9,00 €", image: PLACEHOLDER }
+      { id: "mojito-normal", price: "9,00 €", image: "assets/cocteles/mojito-normal.webp" },
+      { id: "mojito-sabores", price: "9,00 €", image: "assets/cocteles/mojito-sabores.webp" },
+      { id: "daikiri-frozen", price: "9,00 €", image: "assets/cocteles/daikiri-frozen.webp" },
+      { id: "pina-colada", price: "9,00 €", image: "assets/cocteles/pina-colada.webp" },
+      { id: "caipirinha", price: "9,00 €", image: "assets/cocteles/caipirinha.webp" },
+      { id: "caipiroska", price: "9,00 €", image: "assets/cocteles/caipiroska.webp" }
     ]
   }
 ];
@@ -162,12 +157,12 @@ const granizadosSmoothiesGroups = [
     id: "granizados-smoothies-frappes",
     items: [
       { id: "granizado-limon", price: "5,00 €", image: PLACEHOLDER },
-      { id: "smoothie-mango", price: "7,00 €", image: PLACEHOLDER },
-      { id: "smoothie-coco-pina", price: "7,00 €", image: PLACEHOLDER },
-      { id: "smoothie-yogur-melon", price: "7,00 €", image: PLACEHOLDER },
-      { id: "frappe-cafe", price: "7,00 €", image: PLACEHOLDER },
-      { id: "frappe-chocolate", price: "7,00 €", image: PLACEHOLDER },
-      { id: "frappe-vainilla", price: "7,00 €", image: PLACEHOLDER }
+      { id: "smoothie-mango", price: "7,00 €", image: "assets/granizados-smoothies/smoothie-mango.webp" },
+      { id: "smoothie-coco-pina", price: "7,00 €", image: "assets/granizados-smoothies/smoothie-coco-pina.webp" },
+      { id: "smoothie-yogur-melon", price: "7,00 €", image: "assets/granizados-smoothies/smoothie-yogur-melon.webp" },
+      { id: "frappe-cafe", price: "7,00 €", image: "assets/granizados-smoothies/frappe-cafe.webp" },
+      { id: "frappe-chocolate", price: "7,00 €", image: "assets/granizados-smoothies/frappe-chocolate.webp" },
+      { id: "frappe-vainilla", price: "7,00 €", image: "assets/granizados-smoothies/frappe-vainilla.webp" }
     ]
   }
 ];
@@ -177,12 +172,12 @@ const sangriaGroups = [
   {
     id: "sangrias-carta",
     items: [
-      { id: "tinto-verano-vaso", price: "5,00 €", image: PLACEHOLDER },
-      { id: "tinto-verano-jarra", price: "20,00 €", image: PLACEHOLDER },
-      { id: "sangria-vino-blanco", price: "30,00 €", image: PLACEHOLDER },
-      { id: "sangria-vino-tinto", price: "30,00 €", image: PLACEHOLDER },
-      { id: "sangria-cava", price: "35,00 €", image: PLACEHOLDER },
-      { id: "agua-valencia", price: "35,00 €", image: PLACEHOLDER }
+      { id: "tinto-verano-vaso", price: "5,00 €", image: "assets/sangrias/tinto-verano-vaso.webp" },
+      { id: "tinto-verano-jarra", price: "20,00 €", image: "assets/sangrias/tinto-verano-jarra.webp" },
+      { id: "sangria-vino-blanco", price: "30,00 €", image: "assets/sangrias/sangria-vino-blanco.webp" },
+      { id: "sangria-vino-tinto", price: "30,00 €", image: "assets/sangrias/sangria-vino-tinto.webp" },
+      { id: "sangria-cava", price: "35,00 €", image: "assets/sangrias/sangria-cava.webp" },
+      { id: "agua-valencia", price: "35,00 €", image: "assets/sangrias/agua-valencia.webp" }
     ]
   }
 ];
