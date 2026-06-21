@@ -1528,3 +1528,33 @@ updateStaticText();
 renderTabs();
 renderActiveSection();
 updateActiveTabs();
+
+/* ---------- Portada / Landing Screen ---------- */
+(function () {
+  const landing  = document.getElementById("landing-screen");
+  const btn      = document.getElementById("landingBtn");
+  const shell    = document.querySelector(".menu-shell");
+  const bottomNav = document.getElementById("bottomTabs");
+
+  if (!landing || !btn) return;
+
+  /* Mientras la portada es visible, la carta no es alcanzable
+     por teclado ni lectores de pantalla. */
+  if (shell)     shell.setAttribute("inert", "");
+  if (bottomNav) bottomNav.setAttribute("inert", "");
+
+  btn.addEventListener("click", function () {
+    /* 1. Libera la carta */
+    if (shell)     shell.removeAttribute("inert");
+    if (bottomNav) bottomNav.removeAttribute("inert");
+
+    /* 2. Fade-out de la portada */
+    landing.classList.add("is-exiting");
+
+    /* 3. Tras la transición, elimina la portada del flujo */
+    landing.addEventListener("transitionend", function done() {
+      landing.classList.add("is-gone");
+      landing.removeEventListener("transitionend", done);
+    });
+  });
+}());
