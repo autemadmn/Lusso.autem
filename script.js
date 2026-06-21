@@ -1535,8 +1535,26 @@ updateActiveTabs();
   const btn      = document.getElementById("landingBtn");
   const shell    = document.querySelector(".menu-shell");
   const bottomNav = document.getElementById("bottomTabs");
+  const root = document.documentElement;
+  const body = document.body;
 
-  if (!landing || !btn) return;
+  function lockLandingScroll() {
+    root.classList.add("landing-active");
+    body.classList.add("landing-active");
+    window.scrollTo(0, 0);
+  }
+
+  function unlockLandingScroll() {
+    root.classList.remove("landing-active");
+    body.classList.remove("landing-active");
+  }
+
+  if (!landing || !btn) {
+    unlockLandingScroll();
+    return;
+  }
+
+  lockLandingScroll();
 
   /* Mientras la portada es visible, la carta no es alcanzable
      por teclado ni lectores de pantalla. */
@@ -1547,14 +1565,23 @@ updateActiveTabs();
     /* 1. Libera la carta */
     if (shell)     shell.removeAttribute("inert");
     if (bottomNav) bottomNav.removeAttribute("inert");
+    unlockLandingScroll();
 
     /* 2. Fade-out de la portada */
     landing.classList.add("is-exiting");
 
     /* 3. Tras la transición, elimina la portada del flujo */
-    landing.addEventListener("transitionend", function done() {
+    let landingClosed = false;
+
+    function done(event) {
+      if (event && event.target !== landing) return;
+      if (landingClosed) return;
+      landingClosed = true;
       landing.classList.add("is-gone");
       landing.removeEventListener("transitionend", done);
-    });
+    }
+
+    landing.addEventListener("transitionend", done);
+    window.setTimeout(done, 900);
   });
 }());
