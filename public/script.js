@@ -31,9 +31,9 @@ const foodGroups = [
       { id: "nachos-verano", price: "9,00 €", image: "assets/comidas/tapas/nachosdeverano.webp" },
       { id: "tabla-jamon-iberico-duroc", price: "12,00 €", image: "assets/comidas/tapas/tablajamonibericoduroc.webp" },
       { id: "tabla-quesos-valencianos", price: "12,00 €", image: "assets/comidas/tapas/tablaquesosvalencianos.webp" },
-      { id: "servicio-pan", price: "2,00 €", image: GEN.tabla },
-      { id: "servicio-picos-pan-adicional", price: "2,00 €", image: GEN.tabla },
-      { id: "salsas-adicionales", price: "2,00 €", image: "assets/comidas/genericas/ensalada.webp" }
+      { id: "servicio-pan", price: "2,00 €", image: null, selectable: false },
+      { id: "servicio-picos-pan-adicional", price: "2,00 €", image: null, selectable: false },
+      { id: "salsas-adicionales", price: "2,00 €", image: null, selectable: false }
     ]
   },
   {
@@ -878,6 +878,29 @@ function createDishButton(item, sectionName) {
   card.className = "dish";
   card.dataset.dish = item.id;
   card.classList.toggle("has-allergens", Boolean(allergens));
+
+  if (item.selectable === false) {
+    const text = document.createElement("span");
+    const title = document.createElement("strong");
+    const description = document.createElement("small");
+    const price = document.createElement("b");
+
+    card.classList.add("is-static", "dish--static");
+    title.textContent = itemText.title;
+    description.textContent = itemText.description;
+    price.textContent = itemPrice;
+    text.append(title, description);
+
+    if (itemText.note) {
+      const note = document.createElement("em");
+      note.className = "dish-note-inline";
+      note.textContent = itemText.note;
+      text.append(note);
+    }
+
+    card.append(text, price);
+    return card;
+  }
 
   button.className = "dish-select";
   button.type = "button";
