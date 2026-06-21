@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "liveServer.settings.root": "/public",
+  "liveServer.settings.port": 8080,
+  "editor.formatOnSave": false,
+  "files.associations": {
+    "*.css": "css"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  }
+}

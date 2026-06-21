@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Lusso: servir en local (8080)",
+      "type": "shell",
+      "command": "python3 -m http.server 8080",
+      "options": { "cwd": "${workspaceFolder}/public" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "detail": "Sirve la carpeta public/ en http://localhost:8080"
+    },
+    {
+      "label": "Lusso: subir a GitHub (push)",
+      "type": "shell",
+      "command": "bash deploy.sh push",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "detail": "Hace commit (si hay cambios) y push a origin/main"
+    },
+    {
+      "label": "Lusso: publicar en Cloudflare Pages",
+      "type": "shell",
+      "command": "bash deploy.sh deploy",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "detail": "Despliega public/ con wrangler pages deploy"
+    }
+  ]
+}
