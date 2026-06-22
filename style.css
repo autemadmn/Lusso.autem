@@ -1436,8 +1436,11 @@ h1 {
   position: sticky;
   top: 24px;
   isolation: isolate;
+  width: min(100%, 960px);
+  max-width: 960px;
   aspect-ratio: 620 / 465;
   overflow: hidden;
+  margin-inline: auto;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -1466,17 +1469,17 @@ h1 {
 
 .dish-preview .image-frame {
   position: absolute;
-  top: 15.4%;
-  left: 8.8%;
+  top: 13.5%;
+  left: 7.4%;
   z-index: 3;
-  width: 33.7%;
-  height: 59.8%;
+  width: 36%;
+  height: 65.5%;
   min-height: 0;
   aspect-ratio: auto;
   border-radius: 2px;
   background: transparent;
   box-shadow: 0 14px 28px rgba(80, 55, 30, 0.14);
-  transform: rotate(-1.6deg);
+  transform: rotate(-3.5deg);
 }
 
 .dish-preview .image-frame img {
@@ -1549,9 +1552,11 @@ h1 {
   .dish-preview {
     top: 0;
     display: block;
+    width: min(94vw, 960px);
+    max-width: 960px;
     height: auto;
     min-height: 0;
-    margin-inline: -1px;
+    margin-inline: auto;
   }
 
   .dish-preview .preview-copy {
