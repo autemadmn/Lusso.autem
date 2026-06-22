@@ -156,7 +156,7 @@ const granizadosSmoothiesGroups = [
   {
     id: "granizados-smoothies-frappes",
     items: [
-      { id: "granizado-limon", price: "5,00 €", image: PLACEHOLDER },
+      { id: "granizado-limon", price: "5,00 €", image: "assets/granizados-smoothies/granizado-limon.webp" },
       { id: "smoothie-mango", price: "7,00 €", image: "assets/granizados-smoothies/smoothie-mango.webp" },
       { id: "smoothie-coco-pina", price: "7,00 €", image: "assets/granizados-smoothies/smoothie-coco-pina.webp" },
       { id: "smoothie-yogur-melon", price: "7,00 €", image: "assets/granizados-smoothies/smoothie-yogur-melon.webp" },
@@ -351,7 +351,7 @@ const translations = {
       "pina-colada": { title: "Piña colada" },
       caipirinha: { title: "Caipirinha" },
       caipiroska: { title: "Caipiroska" },
-      "granizado-limon": { title: "Granizado de limón", note: "Suplemento 3 € con alcohol." },
+      "granizado-limon": { title: "Granizado Limón", note: "Suplemento 3 € con alcohol." },
       "smoothie-mango": { title: "Smoothie Mango", note: "Suplemento 3 € con alcohol." },
       "smoothie-coco-pina": { title: "Smoothie Coco y piña", note: "Suplemento 3 € con alcohol." },
       "smoothie-yogur-melon": { title: "Smoothie Yogur y melón", note: "Suplemento 3 € con alcohol." },
