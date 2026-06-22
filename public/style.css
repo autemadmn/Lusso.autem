@@ -1,14 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Caveat:wght@400;500&display=swap');
+
 :root {
   color-scheme: light;
-  --ink: #261f1a;
-  --muted: #6d6259;
-  --paper: #fffaf2;
-  --linen: #f4eadc;
-  --sage: #6d7f5f;
-  --tomato: #bb4a34;
-  --gold: #c99a3d;
-  --line: rgba(38, 31, 26, 0.14);
-  --shadow: 0 24px 70px rgba(49, 36, 25, 0.16);
+  --lusso-bg: #F4EDE2;
+  --lusso-paper: #EFE3D2;
+  --lusso-paper-light: #F8F1E8;
+  --lusso-gold: #A77B3F;
+  --lusso-gold-soft: #B8955E;
+  --lusso-brown: #7A624A;
+  --lusso-brown-soft: #9A8064;
+  --lusso-charcoal: #2D2823;
+  --lusso-muted: #7D7064;
+  --lusso-line: rgba(122, 98, 74, 0.28);
+  --lusso-olive: #747247;
+  --lusso-white-soft: #FFF9F0;
+  --ink: var(--lusso-charcoal);
+  --muted: var(--lusso-muted);
+  --paper: var(--lusso-paper-light);
+  --linen: var(--lusso-paper);
+  --sage: var(--lusso-olive);
+  --tomato: var(--lusso-gold);
+  --gold: var(--lusso-gold);
+  --line: var(--lusso-line);
+  --shadow: 0 24px 70px rgba(122, 98, 74, 0.18);
   --bottom-nav: 92px;
 }
 
@@ -18,7 +32,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #d7bc85;
+  background: var(--lusso-bg);
 }
 
 body {
@@ -27,10 +41,10 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: var(--ink);
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--lusso-charcoal);
   background: transparent;
-  background-color: #d7bc85;
+  background-color: var(--lusso-bg);
 }
 
 body::before,
@@ -49,8 +63,8 @@ body::before {
 body::after {
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(255, 250, 242, 0.44), rgba(255, 250, 242, 0.68)),
-    linear-gradient(0deg, rgba(38, 31, 26, 0.12), rgba(38, 31, 26, 0.03));
+    linear-gradient(180deg, rgba(248, 241, 232, 0.48), rgba(244, 237, 226, 0.74)),
+    linear-gradient(0deg, rgba(122, 98, 74, 0.12), rgba(122, 98, 74, 0.03));
 }
 
 body.lightbox-open,
@@ -93,10 +107,10 @@ select {
   display: inline-flex;
   gap: 6px;
   padding: 6px;
-  border: 1px solid rgba(38, 31, 26, 0.14);
+  border: 1px solid rgba(122, 98, 74, 0.18);
   border-radius: 999px;
-  background: rgba(255, 248, 235, 0.9);
-  box-shadow: 0 12px 30px rgba(49, 36, 25, 0.14);
+  background: rgba(255, 249, 240, 0.88);
+  box-shadow: 0 12px 30px rgba(122, 98, 74, 0.14);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -110,20 +124,22 @@ select {
   padding: 6px 7px;
   border: 0;
   border-radius: 999px;
-  color: #68745a;
+  color: var(--lusso-muted);
   background: transparent;
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   line-height: 1;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
 .language-button:hover,
 .language-button:focus-visible {
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.58);
-  outline: 3px solid rgba(201, 86, 58, 0.22);
+  color: var(--lusso-charcoal);
+  background: rgba(248, 241, 232, 0.74);
+  outline: 3px solid rgba(167, 123, 63, 0.24);
   outline-offset: 2px;
 }
 
@@ -132,9 +148,9 @@ select {
 }
 
 .language-button.is-active {
-  color: #fff7ec;
-  background: #c9563a;
-  box-shadow: 0 8px 18px rgba(201, 86, 58, 0.24);
+  color: var(--lusso-white-soft);
+  background: var(--lusso-gold);
+  box-shadow: 0 8px 18px rgba(167, 123, 63, 0.24);
 }
 
 .language-flag {
@@ -153,10 +169,10 @@ select {
 
 .eyebrow {
   margin: 0 0 8px;
-  color: var(--tomato);
+  color: var(--lusso-gold);
   font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -169,9 +185,13 @@ p {
 h1 {
   max-width: 760px;
   margin: 0 auto 2px;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(2.6rem, 7vw, 5.8rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
   line-height: 0.94;
+  text-transform: uppercase;
+  color: var(--lusso-brown);
 }
 
 .brand-title {
@@ -189,11 +209,13 @@ h1 {
 .intro-copy {
   max-width: none;
   margin-bottom: 0;
-  color: rgba(48, 40, 34, 0.76);
+  color: var(--lusso-muted);
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   line-height: 1.6;
-  text-shadow: 0 1px 12px rgba(255, 250, 242, 0.7);
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(248, 241, 232, 0.72);
 }
 
 .category-tabs {
@@ -207,8 +229,8 @@ h1 {
   padding: 8px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 250, 242, 0.86);
-  box-shadow: 0 16px 45px rgba(49, 36, 25, 0.1);
+  background: rgba(255, 249, 240, 0.88);
+  box-shadow: 0 16px 45px rgba(122, 98, 74, 0.1);
   backdrop-filter: blur(16px);
 }
 
@@ -221,27 +243,29 @@ h1 {
   padding: 10px 14px;
   border: 1px solid transparent;
   border-radius: 8px;
-  color: var(--muted);
+  color: var(--lusso-muted);
   background: transparent;
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .tab-button:hover,
 .tab-button:focus-visible {
-  border-color: rgba(187, 74, 52, 0.32);
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.52);
-  outline: 3px solid rgba(109, 127, 95, 0.35);
+  border-color: rgba(167, 123, 63, 0.34);
+  color: var(--lusso-charcoal);
+  background: rgba(248, 241, 232, 0.64);
+  outline: 3px solid rgba(116, 114, 71, 0.25);
   outline-offset: 2px;
 }
 
 .tab-button.is-active {
-  border-color: rgba(187, 74, 52, 0.45);
-  color: var(--ink);
-  background: #fff4e8;
+  border-color: rgba(167, 123, 63, 0.44);
+  color: var(--lusso-gold);
+  background: rgba(239, 227, 210, 0.78);
 }
 
 .menu-layout {
@@ -255,7 +279,7 @@ h1 {
 .dish-preview {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 250, 242, 0.68);
+  background: rgba(248, 241, 232, 0.72);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
@@ -266,10 +290,13 @@ h1 {
 
 .menu-section h2 {
   margin-bottom: 0;
-  color: var(--ink);
-  font-family: "Playfair Display", Georgia, serif;
+  color: var(--lusso-brown);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .section-heading {
@@ -285,17 +312,19 @@ h1 {
 .section-eyebrow {
   grid-column: 1 / -1;
   margin-bottom: 0;
-  color: var(--sage);
+  color: var(--lusso-gold);
   font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .section-count {
-  color: var(--tomato);
+  color: var(--lusso-gold);
   font-size: 0.84rem;
-  font-weight: 800;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -318,31 +347,33 @@ h1 {
   gap: 8px;
   min-height: 160px;
   padding: 28px;
-  border: 1px dashed rgba(38, 31, 26, 0.18);
+  border: 1px dashed rgba(122, 98, 74, 0.28);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.34);
+  background: rgba(248, 241, 232, 0.48);
   place-content: center;
   text-align: center;
 }
 
 .empty-section strong {
-  color: var(--ink);
+  color: var(--lusso-charcoal);
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.8rem;
+  font-weight: 500;
   line-height: 1;
 }
 
 .empty-section p {
   margin: 0;
-  color: var(--muted);
+  color: var(--lusso-muted);
   font-size: 0.95rem;
+  font-weight: 400;
   line-height: 1.5;
 }
 
 .food-group {
-  border: 1px solid rgba(38, 31, 26, 0.1);
+  border: 1px solid var(--lusso-line);
   border-radius: 8px;
-  background: rgba(255, 250, 242, 0.42);
+  background: rgba(239, 227, 210, 0.42);
   overflow: hidden;
 }
 
@@ -359,7 +390,7 @@ h1 {
   min-height: 60px;
   padding: 14px 16px;
   border: 0;
-  color: var(--ink);
+  color: var(--lusso-charcoal);
   background: transparent;
   text-align: left;
   cursor: pointer;
@@ -368,14 +399,14 @@ h1 {
 
 .food-group-toggle:hover,
 .food-group-toggle:focus-visible {
-  background: rgba(255, 255, 255, 0.42);
-  outline: 3px solid rgba(109, 127, 95, 0.35);
+  background: rgba(248, 241, 232, 0.58);
+  outline: 3px solid rgba(116, 114, 71, 0.24);
   outline-offset: -3px;
 }
 
 .food-group.is-open .food-group-toggle {
-  color: #fff7ec;
-  background: #c9563a;
+  color: var(--lusso-charcoal);
+  background: rgba(248, 241, 232, 0.78);
 }
 
 .food-group-title-wrap {
@@ -392,7 +423,7 @@ h1 {
   height: 75px;
   object-fit: contain;
   opacity: 0.88;
-  filter: drop-shadow(0 5px 10px rgba(38, 31, 26, 0.08));
+  filter: drop-shadow(0 5px 10px rgba(122, 98, 74, 0.08));
 }
 
 .food-group-lineart--cavas {
@@ -403,7 +434,7 @@ h1 {
 
 .food-group.is-open .food-group-lineart {
   opacity: 0.96;
-  filter: brightness(0) invert(1) drop-shadow(0 5px 10px rgba(38, 31, 26, 0.1));
+  filter: drop-shadow(0 5px 10px rgba(122, 98, 74, 0.1));
 }
 
 .food-group-label {
@@ -413,16 +444,22 @@ h1 {
 }
 
 .food-group-label strong {
+  color: var(--lusso-charcoal);
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.15;
 }
 
 .food-group-label small {
-  color: inherit;
+  color: var(--lusso-muted);
+  font-family: "Montserrat", sans-serif;
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   line-height: 1;
-  opacity: 0.72;
+  opacity: 1;
+  text-transform: uppercase;
 }
 
 .food-group-indicator {
@@ -431,7 +468,8 @@ h1 {
   width: 30px;
   height: 30px;
   border-radius: 999px;
-  background: rgba(38, 31, 26, 0.08);
+  color: var(--lusso-gold);
+  background: rgba(167, 123, 63, 0.1);
   place-items: center;
   font-size: 1.35rem;
   font-weight: 700;
@@ -439,7 +477,8 @@ h1 {
 }
 
 .food-group.is-open .food-group-indicator {
-  background: rgba(255, 247, 236, 0.18);
+  color: var(--lusso-brown);
+  background: rgba(167, 123, 63, 0.14);
 }
 
 .food-group-panel {
@@ -464,8 +503,8 @@ h1 {
 
 .dish:hover,
 .dish:focus-within {
-  border-color: rgba(187, 74, 52, 0.34);
-  background: rgba(255, 255, 255, 0.46);
+  border-color: rgba(167, 123, 63, 0.34);
+  background: rgba(248, 241, 232, 0.56);
   transform: translateY(-1px);
 }
 
@@ -477,8 +516,8 @@ h1 {
 }
 
 .dish.is-active {
-  border-color: rgba(187, 74, 52, 0.5);
-  background: #fff4e8;
+  border-color: rgba(167, 123, 63, 0.52);
+  background: rgba(239, 227, 210, 0.72);
 }
 
 .dish-select {
@@ -505,7 +544,7 @@ h1 {
 }
 
 .dish-select:focus-visible {
-  outline: 3px solid rgba(109, 127, 95, 0.45);
+  outline: 3px solid rgba(116, 114, 71, 0.32);
   outline-offset: 2px;
 }
 
@@ -518,13 +557,15 @@ h1 {
   min-height: 24px;
   margin: 0 0 12px 14px;
   padding: 5px 9px;
-  border: 1px solid rgba(109, 127, 95, 0.18);
+  border: 1px solid rgba(116, 114, 71, 0.22);
   border-radius: 999px;
-  color: #6d7f5f;
-  background: rgba(255, 250, 242, 0.72);
+  color: var(--lusso-olive);
+  background: rgba(255, 249, 240, 0.74);
   font-size: 0.68rem;
-  font-weight: 900;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   line-height: 1;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
@@ -538,10 +579,10 @@ h1 {
 
 .allergen-trigger:hover,
 .allergen-trigger:focus-visible {
-  color: #fff7ec;
-  background: #6d7f5f;
-  box-shadow: 0 10px 22px rgba(109, 127, 95, 0.18);
-  outline: 3px solid rgba(109, 127, 95, 0.34);
+  color: var(--lusso-white-soft);
+  background: var(--lusso-olive);
+  box-shadow: 0 10px 22px rgba(116, 114, 71, 0.18);
+  outline: 3px solid rgba(116, 114, 71, 0.28);
   outline-offset: 2px;
 }
 
@@ -552,29 +593,37 @@ h1 {
 .dish strong {
   display: block;
   margin-bottom: 6px;
+  color: var(--lusso-charcoal);
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.25;
 }
 
 .dish small {
   display: block;
-  color: var(--muted);
+  color: var(--lusso-muted);
+  font-family: "Montserrat", sans-serif;
   font-size: 0.88rem;
+  font-weight: 400;
   line-height: 1.4;
 }
 
 .dish-note-inline {
   display: block;
   margin-top: 8px;
-  color: var(--sage);
+  color: var(--lusso-olive);
   font-size: 0.8rem;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .dish b {
   align-self: start;
-  color: var(--tomato);
+  color: var(--lusso-gold);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   max-width: 190px;
   text-align: right;
   white-space: normal;
@@ -598,7 +647,7 @@ h1 {
   position: relative;
   aspect-ratio: 3 / 4;
   border-radius: 8px 8px 0 0;
-  background: #fff7ea;
+  background: var(--lusso-paper-light);
   cursor: zoom-in;
   overflow: hidden;
   touch-action: none;
@@ -616,7 +665,7 @@ h1 {
 }
 
 .image-frame:focus-visible {
-  outline: 3px solid rgba(109, 127, 95, 0.48);
+  outline: 3px solid rgba(116, 114, 71, 0.36);
   outline-offset: 3px;
 }
 
@@ -669,7 +718,7 @@ h1 {
   border-radius: 18px;
   object-fit: cover;
   object-position: center;
-  background: #fff7ea;
+  background: var(--lusso-paper-light);
   pointer-events: none;
   box-shadow: 0 26px 68px rgba(38, 31, 26, 0.3);
   transform: scale(1);
@@ -683,15 +732,16 @@ h1 {
   overflow: hidden;
   padding: 26px;
   background:
-    linear-gradient(90deg, rgba(255, 250, 242, 0.88), rgba(255, 250, 242, 0.7)),
+    linear-gradient(90deg, rgba(255, 249, 240, 0.9), rgba(239, 227, 210, 0.72)),
     url("assets/fondos/fondoconcha.webp") right center / cover no-repeat;
 }
 
 .preview-copy p:first-child {
   margin-bottom: 8px;
-  color: var(--gold);
-  font-weight: 800;
-  letter-spacing: 0.07em;
+  color: var(--lusso-gold);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -699,37 +749,42 @@ h1 {
   margin-bottom: 10px;
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  color: var(--lusso-charcoal);
   line-height: 1;
 }
 
 .preview-copy span {
   display: inline-flex;
   margin-bottom: 16px;
-  color: var(--tomato);
+  color: var(--lusso-gold);
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 #dishDescription {
   margin-bottom: 0;
-  color: var(--muted);
+  color: var(--lusso-muted);
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.65;
 }
 
 .photo-disclaimer {
   margin: 10px 0 0;
-  color: var(--muted);
+  color: var(--lusso-muted);
   font-size: 0.86rem;
+  font-weight: 400;
   line-height: 1.5;
   opacity: 0.68;
 }
 
 .dish-note {
   margin: 14px 0 0;
-  color: var(--sage);
+  color: var(--lusso-olive);
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .dish-note.is-hidden {
@@ -762,8 +817,8 @@ h1 {
   height: min(88vh, 860px);
   overflow: hidden;
   border-radius: 18px;
-  background: #fff7ea;
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+  background: var(--lusso-paper-light);
+  box-shadow: 0 28px 80px rgba(45, 40, 35, 0.32);
   opacity: 0;
   transform: translateY(12px) scale(0.96);
   transition: opacity 220ms ease, transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -793,11 +848,11 @@ h1 {
   place-items: center;
   width: 48px;
   height: 48px;
-  border: 1px solid rgba(38, 31, 26, 0.12);
+  border: 1px solid rgba(122, 98, 74, 0.18);
   border-radius: 999px;
-  color: #77716b;
-  background: rgba(246, 242, 235, 0.94);
-  box-shadow: 0 12px 28px rgba(38, 31, 26, 0.22);
+  color: var(--lusso-muted);
+  background: rgba(255, 249, 240, 0.94);
+  box-shadow: 0 12px 28px rgba(122, 98, 74, 0.22);
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
@@ -833,10 +888,10 @@ h1 {
   margin: auto;
   overflow: auto;
   padding: clamp(22px, 5vw, 34px);
-  border: 1px solid rgba(38, 31, 26, 0.12);
+  border: 1px solid rgba(122, 98, 74, 0.18);
   border-radius: 18px;
   background:
-    linear-gradient(90deg, rgba(255, 250, 242, 0.94), rgba(255, 250, 242, 0.78)),
+    linear-gradient(90deg, rgba(255, 249, 240, 0.94), rgba(239, 227, 210, 0.78)),
     url("assets/fondos/fondoconcha.webp") right center / cover no-repeat;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -851,27 +906,30 @@ h1 {
 
 .allergen-modal-eyebrow {
   margin: 0 0 8px;
-  color: var(--sage);
+  color: var(--lusso-gold);
   font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .allergen-modal-panel h2 {
   margin: 0 0 10px;
-  color: var(--ink);
-  font-family: "Playfair Display", Georgia, serif;
+  color: var(--lusso-brown);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   font-size: clamp(2rem, 8vw, 3rem);
   line-height: 0.98;
 }
 
 .allergen-modal-message {
   margin: 0 0 18px;
-  color: var(--muted);
+  color: var(--lusso-muted);
   font-size: 0.98rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -884,15 +942,17 @@ h1 {
   display: grid;
   gap: 12px;
   padding: 14px;
-  border: 1px solid rgba(38, 31, 26, 0.1);
+  border: 1px solid rgba(122, 98, 74, 0.18);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.46);
+  background: rgba(248, 241, 232, 0.54);
 }
 
 .allergen-entry h3 {
   margin: 0;
-  color: var(--ink);
+  color: var(--lusso-charcoal);
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -902,16 +962,16 @@ h1 {
 }
 
 .allergen-group strong {
-  color: var(--sage);
+  color: var(--lusso-gold);
   font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.07em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .allergen-group.traces strong {
-  color: #a66f2f;
+  color: var(--lusso-brown-soft);
 }
 
 .allergen-chip-list {
@@ -923,15 +983,15 @@ h1 {
 .allergen-chip-list span {
   padding: 7px 10px;
   border-radius: 999px;
-  color: #443b31;
-  background: rgba(109, 127, 95, 0.12);
+  color: var(--lusso-charcoal);
+  background: rgba(116, 114, 71, 0.12);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1;
 }
 
 .allergen-group.traces .allergen-chip-list span {
-  background: rgba(201, 154, 61, 0.16);
+  background: rgba(167, 123, 63, 0.16);
 }
 
 .allergen-modal-close {
@@ -943,11 +1003,11 @@ h1 {
   place-items: center;
   width: 48px;
   height: 48px;
-  border: 1px solid rgba(38, 31, 26, 0.12);
+  border: 1px solid rgba(122, 98, 74, 0.18);
   border-radius: 999px;
-  color: #77716b;
-  background: rgba(246, 242, 235, 0.94);
-  box-shadow: 0 12px 28px rgba(38, 31, 26, 0.22);
+  color: var(--lusso-muted);
+  background: rgba(255, 249, 240, 0.94);
+  box-shadow: 0 12px 28px rgba(122, 98, 74, 0.22);
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
@@ -1010,10 +1070,10 @@ h1 {
     width: calc(100% - 24px);
     max-width: 540px;
     padding: 10px;
-    border: 1px solid rgba(38, 31, 26, 0.14);
+    border: 1px solid rgba(122, 98, 74, 0.18);
     border-radius: 24px;
-    background: rgba(255, 248, 235, 0.9);
-    box-shadow: 0 18px 50px rgba(49, 36, 25, 0.22);
+    background: rgba(255, 249, 240, 0.88);
+    box-shadow: 0 18px 50px rgba(122, 98, 74, 0.22);
     transform: translateX(-50%);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -1030,11 +1090,14 @@ h1 {
     padding: 11px 15px;
     border: 0;
     border-radius: 999px;
-    color: #68745a;
-    background: rgba(255, 250, 242, 0.96);
-    box-shadow: 0 8px 20px rgba(38, 31, 26, 0.1);
+    color: var(--lusso-muted);
+    background: rgba(255, 249, 240, 0.96);
+    box-shadow: 0 8px 20px rgba(122, 98, 74, 0.1);
     font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     line-height: 1;
+    text-transform: uppercase;
     white-space: nowrap;
     touch-action: manipulation;
     transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
@@ -1048,7 +1111,7 @@ h1 {
     left: 22px;
     height: 2px;
     border-radius: 999px;
-    background: rgba(255, 247, 236, 0.82);
+    background: rgba(167, 123, 63, 0.62);
     opacity: 0;
     transform: scaleX(0.5);
     transition: opacity 180ms ease, transform 180ms ease;
@@ -1056,10 +1119,10 @@ h1 {
 
   .bottom-tabs .tab-button:hover,
   .bottom-tabs .tab-button:focus-visible {
-    color: #45513d;
-    background: rgba(255, 250, 242, 0.98);
-    box-shadow: 0 10px 24px rgba(38, 31, 26, 0.13);
-    outline: 3px solid rgba(201, 86, 58, 0.22);
+    color: var(--lusso-charcoal);
+    background: rgba(248, 241, 232, 0.98);
+    box-shadow: 0 10px 24px rgba(122, 98, 74, 0.13);
+    outline: 3px solid rgba(167, 123, 63, 0.22);
     outline-offset: 2px;
   }
 
@@ -1068,9 +1131,9 @@ h1 {
   }
 
   .bottom-tabs .tab-button.is-active {
-    color: #fff7ec;
-    background: #c9563a;
-    box-shadow: 0 14px 30px rgba(201, 86, 58, 0.32);
+    color: var(--lusso-gold);
+    background: rgba(239, 227, 210, 0.96);
+    box-shadow: 0 14px 30px rgba(167, 123, 63, 0.24);
     transform: translateY(-3px);
   }
 
@@ -1087,9 +1150,11 @@ h1 {
     display: block;
     max-width: none;
     overflow: visible;
-    font-weight: 800;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     line-height: 1;
     white-space: nowrap;
+    text-transform: uppercase;
   }
 
   .menu-layout {
@@ -1321,7 +1386,12 @@ h1 {
 .brand-title {
   max-width: min(420px, 70vw);
   margin-bottom: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   line-height: 0;
+  text-transform: uppercase;
+  color: var(--lusso-gold);
 }
 
 .brand-logo {
@@ -1336,11 +1406,11 @@ h1 {
   min-height: 56px;
   padding: 14px 16px;
   border-radius: 8px;
-  background: rgba(255, 250, 242, 0.52);
+  background: rgba(248, 241, 232, 0.52);
 }
 
 .dish--static b {
-  color: var(--tomato);
+  color: var(--lusso-gold);
   white-space: nowrap;
 }
 
@@ -1369,12 +1439,12 @@ h1 {
 .allergen-pending {
   margin: 4px 0 0;
   padding: 14px 16px;
-  border: 1px dashed rgba(187, 74, 52, 0.5);
+  border: 1px dashed rgba(167, 123, 63, 0.5);
   border-radius: 14px;
-  background: rgba(255, 244, 232, 0.7);
-  color: var(--muted);
+  background: rgba(239, 227, 210, 0.7);
+  color: var(--lusso-muted);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -1519,11 +1589,11 @@ body.landing-active .bottom-tabs {
   position: relative;
   z-index: 1;
   margin: 0 0 clamp(68px, 10dvh, 110px);
-  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  font-size: clamp(1.6rem, 6.3vw, 2.25rem);
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.85rem, 7vw, 2.65rem);
   font-weight: 400;
-  font-style: italic;
-  color: rgba(255, 245, 218, 0.98);
+  font-style: normal;
+  color: var(--lusso-white-soft);
   letter-spacing: 0;
   line-height: 1.3;
   text-shadow: 0 3px 18px rgba(8, 4, 0, 0.5);
@@ -1548,7 +1618,7 @@ body.landing-active .bottom-tabs {
   background: linear-gradient(180deg, rgba(255, 244, 218, 0.96), rgba(232, 202, 148, 0.92));
   border: 1px solid rgba(190, 145, 70, 0.55);
   border-radius: 999px;
-  color: #8a5b24;
+  color: var(--lusso-gold);
   font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   font-size: clamp(1.45rem, 5.4vw, 1.7rem);
   font-weight: 500;
@@ -1608,10 +1678,19 @@ body.landing-active .bottom-tabs {
   }
 
   .landing-logo {
-    width: min(72vw, 310px);
+    width: min(68vw, 290px);
   }
 
   .landing-tagline {
+    max-width: calc(100vw - 72px);
     margin-bottom: clamp(72px, 10dvh, 96px);
+    font-size: clamp(1.45rem, 6vw, 1.8rem);
+    white-space: nowrap;
+  }
+
+  .landing-btn {
+    min-width: min(280px, 72vw);
+    max-width: 72vw;
+    padding-inline: 42px;
   }
 }
