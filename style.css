@@ -1502,6 +1502,7 @@ body.landing-active .bottom-tabs {
   position: absolute;
   inset: 0;
   background: url("assets/fondos/imagenfondoinicio.png") center center / cover no-repeat;
+  background-image: url("assets/fondos/imagenfondoinicio.webp");
   z-index: 0;
   will-change: transform;
 }
