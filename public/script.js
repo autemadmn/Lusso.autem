@@ -1043,6 +1043,7 @@ function renderActiveSection() {
   const eyebrow = document.createElement("p");
   const title = document.createElement("h2");
   const count = document.createElement("span");
+  const stamp = document.createElement("img");
   const itemCount = getSectionItemCount(section);
 
   menuList.textContent = "";
@@ -1051,13 +1052,19 @@ function renderActiveSection() {
   eyebrow.className = "section-eyebrow";
   title.id = "activeCategoryTitle";
   count.className = "section-count";
+  stamp.className = "section-stamp";
+  stamp.src = "assets/estampita.webp";
+  stamp.alt = "";
+  stamp.setAttribute("aria-hidden", "true");
+  stamp.loading = "lazy";
+  stamp.decoding = "async";
 
   eyebrow.textContent = ui.sectionEyebrow;
   title.textContent = sectionText.category;
   count.textContent = itemCount > 0 ? formatProductCount(itemCount) : ui.pending;
 
   heading.append(eyebrow, title, count);
-  sectionBlock.append(heading);
+  sectionBlock.append(heading, stamp);
 
   if (itemCount === 0) {
     resetImageDrag();

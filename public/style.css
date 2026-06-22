@@ -288,6 +288,10 @@ h1 {
   padding: 24px;
 }
 
+.menu-section {
+  position: relative;
+}
+
 .menu-section h2 {
   margin-bottom: 0;
   color: var(--lusso-brown);
@@ -305,8 +309,21 @@ h1 {
   gap: 6px 12px;
   align-items: end;
   margin-bottom: 16px;
+  padding-right: clamp(108px, 22vw, 140px);
   padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
+}
+
+.section-stamp {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  z-index: 0;
+  width: clamp(78px, 22vw, 108px);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 6px 12px rgba(80, 55, 30, 0.12));
 }
 
 .section-eyebrow {
