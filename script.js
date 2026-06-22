@@ -1157,6 +1157,7 @@ async function showDish(selectedDish, sectionName) {
   dishImage.alt = itemText.title;
   dishCategory.textContent = sectionName;
   dishTitle.textContent = itemText.title;
+  dishPreview.dataset.titleSize = itemText.title.length > 18 ? "long" : "short";
   dishPrice.textContent = getItemPrice(selectedDish);
   dishDescription.textContent = itemText.description;
   photoDisclaimer.classList.toggle("is-hidden", !selectedDish.image);
