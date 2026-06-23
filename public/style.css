@@ -1479,7 +1479,8 @@ h1 {
   border-radius: 2px;
   background: transparent;
   box-shadow: 0 14px 28px rgba(80, 55, 30, 0.14);
-  transform: rotate(-3.5deg);
+  transform: rotate(-6.6deg);
+  transform-origin: 50% 50%;
 }
 
 .dish-preview .image-frame img {
