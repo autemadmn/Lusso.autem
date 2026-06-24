@@ -190,9 +190,13 @@ const allergenData = {
   "nachos-verano": { contains: ["lacteos"], traces: ["gluten"] },
   "tabla-quesos-valencianos": { contains: ["lacteos"], traces: [] },
   "servicio-pan": { contains: ["gluten"], traces: [] },
-  "servicio-picos-pan-adicional": { contains: ["gluten"], traces: [], pending: true },
+  "servicio-picos-pan-adicional": { contains: ["gluten"], traces: [] },
   margarita: { contains: ["gluten", "lacteos"], traces: [] },
-  "cuatro-quesos": { contains: ["gluten", "lacteos"], traces: [] }
+  tartufata: { contains: ["gluten", "lacteos"], traces: [] },
+  "jamon-queso": { contains: ["gluten", "lacteos"], traces: [] },
+  "cuatro-quesos": { contains: ["gluten", "lacteos"], traces: [] },
+  peperoni: { contains: ["gluten", "lacteos"], traces: [] },
+  canibal: { contains: ["gluten", "lacteos"], traces: [] }
 };
 
 const ALLERGEN_LABELS = {
@@ -928,7 +932,9 @@ function createDishButton(item, sectionName) {
   button.append(text, price);
   button.addEventListener("click", () => showDish(item, sectionName));
   card.append(button);
-  card.append(createAllergenButton(item, itemText.title));
+  if (allergens) {
+    card.append(createAllergenButton(item, itemText.title));
+  }
   return card;
 }
 
