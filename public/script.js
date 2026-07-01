@@ -15,6 +15,13 @@ const GEN = {
 /* ---------- COMIDA ---------- */
 const foodGroups = [
   {
+    id: "desayuno",
+    items: [
+      { id: "desayuno-traditional", price: "5,00 €", image: "assets/comidas/desayuno/desayunotradicional.webp" },
+      { id: "desayuno-supreme", price: "7,00 €", image: "assets/comidas/desayuno/28_05_26_TAVOLAWEB-161.jpg" }
+    ]
+  },
+  {
     id: "picar",
     items: [
       { id: "papas", price: "2,00 €", image: "assets/comidas/aperitivo-picar/papas.webp" },
@@ -26,11 +33,14 @@ const foodGroups = [
   {
     id: "tapas",
     items: [
-      { id: "ensaladilla-rusa", price: "9,00 €", image: "assets/comidas/tapas/28_05_26_TAVOLAWEB-94.jpg" },
+      { id: "ensaladilla-rusa", price: "8,00 €", image: "assets/comidas/tapas/28_05_26_TAVOLAWEB-94.jpg" },
       { id: "ajo-arriero", price: "7,00 €", image: "assets/comidas/tapas/ajoarriero.webp" },
-      { id: "nachos-verano", price: "9,00 €", image: "assets/comidas/tapas/nachosdeverano.webp" },
+      { id: "nachos-verano", price: "8,00 €", image: "assets/comidas/tapas/nachosdeverano.webp" },
+      { id: "nachos-tartar", price: "10,00 €", image: "assets/comidas/tapas/nachoscontartardesalmon.webp" },
       { id: "tabla-jamon-iberico-duroc", price: "12,00 €", image: "assets/comidas/tapas/tablajamonibericoduroc.webp" },
-      { id: "tabla-quesos-valencianos", price: "12,00 €", image: "assets/comidas/tapas/tablaquesosvalencianos.webp" },
+      { id: "tabla-quesos-valencianos", price: "10,00 €", image: "assets/comidas/tapas/tablaquesosvalencianos.webp" },
+      { id: "mini-tortilla-jamon", price: "9,00 €", image: "assets/comidas/tapas/minitortillaconjamon.webp" },
+      { id: "mejillones-vapor", price: "10,00 €", image: "assets/comidas/tapas/mejillonesalvaporconlimon.webp" },
       { id: "servicio-pan", price: "2,00 €", image: null, selectable: false },
       { id: "servicio-picos-pan-adicional", price: "2,00 €", image: null, selectable: false },
       { id: "salsas-adicionales", price: "2,00 €", image: null, selectable: false }
@@ -215,6 +225,7 @@ const groupLinearts = {
   "vinos-rosados": "assets/linearts/bebidas/vinosrosadosart.webp",
   "vinos-tintos": "assets/linearts/bebidas/vinostintosart.webp",
   "cavas-espumosos": "assets/linearts/bebidas/cavasyespumososart.webp",
+  desayuno: "assets/linearts/comidas/desayunoart.webp",
   picar: "assets/linearts/comidas/aperitivoypicarart.webp",
   tapas: "assets/linearts/comidas/tapasart.webp",
   pizzas: "assets/linearts/comidas/pizzaart.webp"
@@ -272,6 +283,7 @@ const translations = {
       sangrias: { category: "Sangrías", shortLabel: "Sangrías" }
     },
     groups: {
+      desayuno: { category: "Desayunos", shortLabel: "Desayunos" },
       picar: { category: "Aperitivo y picar", shortLabel: "Picar" },
       tapas: { category: "Tapas", shortLabel: "Tapas" },
       pizzas: { category: "Pizzas al horno de piedra", shortLabel: "Pizzas" },
@@ -288,6 +300,8 @@ const translations = {
       "sangrias-carta": { category: "Sangrías", shortLabel: "Sangrías" }
     },
     items: {
+      "desayuno-traditional": { title: "Tradicional", description: "Café o té/infusión + tostada a elegir: aceite, mermelada, tomate, mantequilla o bollería.", note: "Hasta las 12:00h" },
+      "desayuno-supreme": { title: "Supreme", description: "Café o té/infusión + tostada a elegir: tostada jamón con tomate, salmón y aguacate, o atún con tomate.", note: "Hasta las 12:00h" },
       papas: { title: "Papas", description: "Patatas fritas crujientes, doradas al punto y con su pizca de sal." },
       aceitunas: { title: "Aceitunas", description: "Aceitunas aliñadas a la manera mediterránea, carnosas y con un toque herbáceo." },
       "papas-mejillones": { title: "Papas con mejillones", description: "Nuestras papas coronadas con mejillones tiernos y jugosos." },
@@ -295,8 +309,11 @@ const translations = {
       "ensaladilla-rusa": { title: "Ensaladilla rusa", description: "Patata, atún y verduras envueltos en una mayonesa suave y casera. Un imprescindible del aperitivo." },
       "ajo-arriero": { title: "Ajo arriero", description: "Bacalao desmigado y emulsionado con ajo y aceite de oliva, en su textura cremosa tradicional." },
       "nachos-verano": { title: "Nachos de verano", description: "Nachos crujientes con su fundido de queso y toppings frescos, pensados para compartir." },
+      "nachos-tartar": { title: "Nachos tartar", description: "Salsa especial Lusso." },
       "tabla-jamon-iberico-duroc": { title: "Tabla jamón iberico duroc", description: "Jamón ibérico duroc cortado a cuchillo, de sabor profundo y grasa infiltrada que se deshace en boca." },
       "tabla-quesos-valencianos": { title: "Tabla quesos valencianos", description: "Variedad de quesos artesanos de la tierra valenciana, del más suave al más curado." },
+      "mini-tortilla-jamon": { title: "Mini tortilla con jamón", description: "Mini tortilla acompañada de jamón." },
+      "mejillones-vapor": { title: "Mejillones al vapor", description: "Mejillones al vapor con un toque de limón." },
       "servicio-pan": { title: "Servicio de pan" },
       "servicio-picos-pan-adicional": { title: "Servicio de picos y pan adicional" },
       "salsas-adicionales": { title: "Salsas adicionales" },
@@ -408,6 +425,7 @@ const translations = {
       sangrias: { category: "Sangrias", shortLabel: "Sangrias" }
     },
     groups: {
+      desayuno: { category: "Breakfast", shortLabel: "Breakfast" },
       picar: { category: "Snacks & nibbles", shortLabel: "Snacks" },
       tapas: { category: "Tapas", shortLabel: "Tapas" },
       pizzas: { category: "Stone oven pizzas", shortLabel: "Pizzas" },
@@ -424,6 +442,8 @@ const translations = {
       "sangrias-carta": { category: "Sangrias", shortLabel: "Sangrias" }
     },
     items: {
+      "desayuno-traditional": { title: "Traditional", description: "Coffee or tea/herbal infusion + toast of your choice: olive oil, jam, tomato, butter, or pastry.", note: "Until 12:00." },
+      "desayuno-supreme": { title: "Supreme", description: "Coffee or tea/herbal infusion + toast of your choice: ham with tomato, salmon and avocado, or tuna with tomato.", note: "Until 12:00." },
       papas: { title: "Crisps", description: "Crispy golden fries with just the right pinch of salt." },
       aceitunas: { title: "Olives", description: "Mediterranean-style marinated olives, meaty with a herby touch." },
       "papas-mejillones": { title: "Crisps with mussels", description: "Our fries topped with tender, juicy mussels." },
@@ -431,8 +451,11 @@ const translations = {
       "ensaladilla-rusa": { title: "Russian salad", description: "Potato, tuna and vegetables in a smooth homemade mayonnaise. An aperitif must-have." },
       "ajo-arriero": { title: "Ajo arriero", description: "Shredded cod emulsified with garlic and olive oil, in its traditional creamy texture." },
       "nachos-verano": { title: "Summer nachos", description: "Crispy nachos with melted cheese and fresh toppings, made for sharing." },
+      "nachos-tartar": { title: "Nachos tartar", description: "Lusso special sauce." },
       "tabla-jamon-iberico-duroc": { title: "Iberico Duroc ham board", description: "Hand-carved Iberian Duroc ham, deep in flavour with marbled fat that melts in the mouth." },
       "tabla-quesos-valencianos": { title: "Valencian cheese board", description: "A selection of artisan cheeses from the Valencian region, from mild to mature." },
+      "mini-tortilla-jamon": { title: "Mini Spanish omelette with ham", description: "Mini Spanish omelette served with ham." },
+      "mejillones-vapor": { title: "Steamed mussels", description: "Steamed mussels with a touch of lemon." },
       "servicio-pan": { title: "Bread service" },
       "servicio-picos-pan-adicional": { title: "Extra breadsticks & bread service" },
       "salsas-adicionales": { title: "Extra sauces" },
@@ -544,6 +567,7 @@ const translations = {
       sangrias: { category: "Sangrias", shortLabel: "Sangrias" }
     },
     groups: {
+      desayuno: { category: "Frühstück", shortLabel: "Frühstück" },
       picar: { category: "Aperitif & Snacks", shortLabel: "Snacks" },
       tapas: { category: "Tapas", shortLabel: "Tapas" },
       pizzas: { category: "Pizzen aus dem Steinofen", shortLabel: "Pizzen" },
@@ -560,6 +584,8 @@ const translations = {
       "sangrias-carta": { category: "Sangrias", shortLabel: "Sangrias" }
     },
     items: {
+      "desayuno-traditional": { title: "Traditional", description: "Kaffee oder Tee/Kräutertee + Toast nach Wahl: Olivenöl, Marmelade, Tomate, Butter oder Gebäck.", note: "Bis 12:00 Uhr." },
+      "desayuno-supreme": { title: "Supreme", description: "Kaffee oder Tee/Kräutertee + Toast nach Wahl: Schinken mit Tomate, Lachs und Avocado oder Thunfisch mit Tomate.", note: "Bis 12:00 Uhr." },
       papas: { title: "Kartoffelchips", description: "Knusprige, goldene Pommes mit einer Prise Salz." },
       aceitunas: { title: "Oliven", description: "Mediterran marinierte Oliven, fleischig mit einer Kräuternote." },
       "papas-mejillones": { title: "Chips mit Miesmuscheln", description: "Unsere Pommes mit zarten, saftigen Muscheln." },
@@ -567,8 +593,11 @@ const translations = {
       "ensaladilla-rusa": { title: "Russischer Salat", description: "Kartoffel, Thunfisch und Gemüse in cremiger, hausgemachter Mayonnaise. Ein Aperitif-Klassiker." },
       "ajo-arriero": { title: "Ajo arriero", description: "Zerpflückter Kabeljau, emulgiert mit Knoblauch und Olivenöl, in traditionell cremiger Textur." },
       "nachos-verano": { title: "Sommer-Nachos", description: "Knusprige Nachos mit geschmolzenem Käse und frischen Toppings, zum Teilen gemacht." },
+      "nachos-tartar": { title: "Nachos tartar", description: "Lusso-Spezialsauce." },
       "tabla-jamon-iberico-duroc": { title: "Iberico-Duroc-Schinkenplatte", description: "Handgeschnittener iberischer Duroc-Schinken, intensiv im Geschmack mit zartem Fett, das auf der Zunge zergeht." },
       "tabla-quesos-valencianos": { title: "Valencianische Käseplatte", description: "Eine Auswahl handwerklicher Käsesorten aus der Region Valencia, von mild bis gereift." },
+      "mini-tortilla-jamon": { title: "Mini-Tortilla mit Schinken", description: "Mini-Tortilla mit Schinken serviert." },
+      "mejillones-vapor": { title: "Gedämpfte Miesmuscheln", description: "Gedämpfte Miesmuscheln mit einem Hauch Zitrone." },
       "servicio-pan": { title: "Brotgedeck" },
       "servicio-picos-pan-adicional": { title: "Zusätzliche Brotstangen & Brot" },
       "salsas-adicionales": { title: "Zusätzliche Saucen" },
